@@ -16,6 +16,7 @@ def kysy_nimet(lkm):
         nimet.append(nimi)
     return nimet
 
-
-nimilista= kysy_nimet(3)
-print(nimilista)
+if __name__=="__main__":
+    print("Testataan kolmella nimellä")
+    nimilista= kysy_nimet(3)
+    print("Tulos:", nimilista)
