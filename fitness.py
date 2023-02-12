@@ -55,7 +55,7 @@ def lapsen_rasvaprosentti(bmi, ika, sukupuoli):
 # Suoritetaan seuraavat rivit vain, jos tämä tiedosto on pääohjelma
 # Mahdollistaa funktioden lataamisen toisiin ohjelmiin
 # Kun koodi ladataan, if __name__ == "__main__":n alapuolella olevaa koodia ei suoriteta
-if __name__ == "__main__":
+if __name__ == "__main__": # Kaikki tämän yläpuolella on käytettävissä muualla mutta alapuolella olevat ei.
 
     # Kysytään käyttäjältä tiedot
     pituus_teksti = input('Kuinka pitkä olet (cm): ')

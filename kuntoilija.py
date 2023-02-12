@@ -20,7 +20,7 @@ class Kuntoilija:
         self.ika = ika
         self.sukupuoli = sukupuoli
 
-if __name__ == '__main__':
+if __name__ == '__main__': # Kaikki tämän yläpuolella on käytettävissä muualla mutta alapuolella olevat ei. (alapuolella olevaa koodia ei suoriteta)
 
     # Luodaan oli luokasta Kuntoilija
     kuntoilija = Kuntoilija('Kalle Kuntoilija', 171, 65, 40, 1)
