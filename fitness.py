@@ -8,8 +8,8 @@ def laske_bmi(paino, pituus):
     """Laskee painoindeksin (BMI)
 
     Args:
-        paino float: paino (kg)
-        pituus float: pituus (cm)
+        paino (float): paino (kg)
+        pituus (float): pituus (cm)
 
     Returns:
         float: painoindenksin desimaalin tarkkuudella 
@@ -25,14 +25,14 @@ def aikuisen_rasvaprosentti(bmi, ika, sukupuoli):
 
     Args:
         bmi (float): painoindeksi
-        ika (float): henkilöni ikä
+        ika (float): henkilön ikä
         sukupuoli (float): 1 -> mies, 0 -> nainen
 
     Returns:
         float: kehon rasvaprosenttti (aikuinen)
     """
-    rasvaprosentti = 1.2 * bmi + 0.23 * ika - 10.8 * sukupuoli - 5
-    rasvaprosentti = round(rasvaprosentti)
+    rasvaprosentti = 1.20 * bmi + 0.23 * ika - 10.8 * sukupuoli - 5.4
+    rasvaprosentti = round(rasvaprosentti, 1)
     return rasvaprosentti
 
 
@@ -40,15 +40,15 @@ def lapsen_rasvaprosentti(bmi, ika, sukupuoli):
     """Laskee lapsen kehon rasvaprosentin
 
     Args:
-        bmi float: painoindeksi
-        ika float: ikä
-        sukupuoli float: poika -> 1, tyttö -> 0
+        bmi (float): painoindeksi
+        ika (float): ikä
+        sukupuoli (float): poika -> 1, tyttö -> 0
 
     Returns:
         float: kehon rasvaprosentti (lapsi)
     """
     rasvaprosentti = 1.51 * bmi - 0.7 * ika - 3.6 * sukupuoli + 1.4
-    rasvaprosentti = round(rasvaprosentti)
+    rasvaprosentti = round(rasvaprosentti, 1)
     return rasvaprosentti
 
 
