@@ -11,10 +11,14 @@ import fitness
 # LUOKKAMÄÄRITYKSET (CLASS DEFINITIONS)
 # -------------------------------------
 
+
+# Kuntoilija-luokka Yliluokka (super class) JuniorKuntoilijalle 
+
+# Luokan nimi alkaa aina ISOLLA kirjaimella ja olio alkaa pienellä esim. Kuntoilija ja kuntoilija
 class Kuntoilija:
     """Luokka kuntoilijan tietoja varten"""
 
-    # Oliomuodostin eli konstruktori, self -> tuleva olio
+    # Oliomuodostin eli konstruktori, self -> tuleva olio (jonka nimeä ei vielä tiedetä) mutta sen parametrit laitetaan tähän
     def __init__(self, nimi, pituus, paino, ika, sukupuoli):
         
         # Määritellään tulevan olion ominaisuudet (property), luokan kentät (field)
