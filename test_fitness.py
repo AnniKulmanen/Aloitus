@@ -25,3 +25,11 @@ def test_laske_lapsen_rasvaprosentti():
     assert fitness.lapsen_rasvaprosentti(24.4, 14, 0) == 28.4
     assert fitness.lapsen_rasvaprosentti(24.4, 14, 1) == 24.8
  
+# Testejä USA:n rasvaprosentti laskurilla
+def test_naisen_usa_rasvaprosentti():
+    assert round(fitness.usarasvaprosentti_nainen(170, 70, 37, 90)) == 18
+    assert round(fitness.usarasvaprosentti_nainen(170, 90, 42, 90)) == 26
+
+def test_miehen_usa_rasvaprosentti():
+    assert round(fitness.usarasvaprosentti_mies(171, 91, 38)) == 22
+    assert round(fitness.usarasvaprosentti_mies(170, 120, 42)) == 37
