@@ -33,9 +33,35 @@ class Kuntoilija:
     def rasvaprosentti(self): # Tähän voisi laittaa parametreja jos haluaa
         self.rasvaprosenntti = fitness.aikuisen_rasvaprosentti(self.bmi, self.ika, self.sukupuoli) # Tässä haetaan fitness.py tietoja kun laitat vain fitness. sinulle ehdotetaan tietoja joita sieltä on saatavilla ja kun laitat sulut loppuun se kertoo mitä tarvitset. Koska meillä oli tehty self.bmi,self,ika jne oliot voit käyttää niitä tässä
         return self.rasvaprosenntti  # Kun kutsutaan kuntoilija oliosta rasvaprosenttia. Tähän ptäisi tulla rasvaprosentti
+
+ # Metodit rasvaprosenttien laskemiseen USA:n armeijan metodeilla
+    def usa_rasvaprosentti_mies(self, pituus, vyotaron_ymparys, kaulan_ymparys):
+        """Laskee miehen rasvaprosentin USA:n armeijan kaavalla
+        Args:
+            pituus (float): pituus (cm)
+            vyotaron_ymparys (float): vyötärön ympärysmitta (cm)
+            kaulan_ymparys (float): kaulan ympärys (cm)
+        Returns:
+            float: rasvaprosentti
+        """
+        usa_rasvaprosentti = fitness.usarasvaprosentti_mies(pituus, vyotaron_ymparys,kaulan_ymparys)
+        return usa_rasvaprosentti
+
+    def usa_rasvaprosentti_nainen(self, pituus, vyotaron_ymparys, lantion_ymparys, kaulan_ymparys):
+        """Laskee kehon rasvaprosentin USA:n armeijan kaavalla
+        Args:
+            pituus (float): pituus (cm)
+            vyotaron_ymparys (float): vyötärön ympärysmitta (cm)
+            lantion_ymparys (float): lantion ympärysmitta (cm)
+            kaulan_ymparys (float): kaulan ympärysmitta (cm)
+        Returns:
+            float: rasvaprosentti
+        """
+        usa_rasvaprosentti = fitness.usarasvaprosentti_nainen(
+            pituus, vyotaron_ymparys, lantion_ymparys, kaulan_ymparys)
+        return usa_rasvaprosentti
     
 # JuniorKuntoilija-luokka Kuntoilija-luokan ailuokka (subclass)
-
 
 class JunioriKuntoilija(Kuntoilija):
     """Luokka nuoren kuntoilijan tiedoille """
