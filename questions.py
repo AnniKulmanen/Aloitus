@@ -63,7 +63,7 @@ class Question():
         """
 
         # If loop argument is true use while loop until user inputs correct value
-        if loop == True:
+        if loop == False:
             
             while True:
                 answer_txt = input(self.question)
