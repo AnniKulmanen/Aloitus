@@ -13,6 +13,51 @@ class Question():
     def __init__(self, question):
         self.question = question
 
+    @staticmethod
+    def ask_user_integer(question, loop):
+        """Asks a question and converts the answer to an integer
+        
+        Args:
+            loop (bool): If True asks the question until able to convert it
+        
+        Returns:
+            tuple: answer as integer, error message, error code, detailed error
+        """
+
+        # If loop argument is true use while loop until user inputs correct value
+        if loop == True:
+
+            while True:
+                answer_txt = input(question)
+
+                # Let's try to convert input to numeric
+                try:
+                    answer = int(answer_txt)
+                    result = (answer, 'OK', 0, 'Conversion successful')
+                    break
+
+                # If an error occurs tell the user to check
+                except Exception as e:
+                    print('Virhe syötetyssä arvossa, älä käytä yksiköitä', e)
+                    result = (0, 'Error', 1, str(e))
+
+        # Else ask once and return zero value and error information
+        else:
+            answer_txt = input(question)
+
+            # Let's try to convert input to numeric
+            try:
+                answer = int(answer_txt)
+                result = (answer, 'OK', 0, 'Conversion successful')
+
+            # If an error occurs tell the user to check
+            except Exception as e:
+                print('Virhe syötetyssä arvossa, älä käytä yksiköitä', e)
+                result = (0, 'Error', 1, str(e))
+
+        return result
+
+    
     def ask_user_float(self, loop):
         """Asks a question and converts the answer to a floating point number
         
@@ -28,7 +73,7 @@ class Question():
 
             while True:
                 answer_txt = input(self.question)
-# TODO: Add a routine to change, to if user types wrong symbol
+# TODO: Add a routine to change, to . if user types wrong symbol
                 # Let's try to convert input to numeric
                 try:
                     answer = float(answer_txt)
@@ -56,108 +101,69 @@ class Question():
 
         return result
 
-    def ask_user_integer(self, loop):
-        """Asks a question and converts the answer to an integer
+   # def ask_user_integer(self, loop):
+    #    """Ask a question and coverts the answer to an integer
         
-        Args:
-            loop (bool): If True asks the question until able to convert it
+     #   Args:
+      #      loop (bool): If True asks the question until able to convert it
         
-        Returns:
-            tuple: answer as integer, error message, error code, detailed error
-        """
+       # Returns:
+        #    tuple: answer as integer, error message, error code, detailed error
+        #"""
 
         # If loop argument is true use while loop until user inputs correct value
-        if loop == True:
+       #if loop == True:
 
-            while True:
-                answer_txt = input(self.question)
-
+        #    while True:
+              # answer_txt = input(self.question)
+        
                 # Let's try to convert input to numeric
-                try:
-                    answer = int(answer_txt)
-                    result = (answer, 'OK', 0, 'Conversion successful')
-                    break
-
+               #try:
+                #  answer = int(answer_txt)
+                 # result = (answer, 'OK', 0, 'Conversion successful')
+                  #break
+        
                 # If an error occurs tell the user to check
-                except Exception as e:
-                    print('Virhe syötetyssä arvossa, älä käytä yksiköitä', e)
-                    result = (0, 'Error', 1, str(e))
-
-        # Else ask once and return zero value and error information
-        else:
-            answer_txt = input(self.question)
-
+           #    except Exception  as e:
+                  # print('Virhe syötetyssä arvossa, älä käytä yksiköitä', e)
+                 #  result = (0, 'Error', 1, str(e))
+    
+         # Else ask once and return zero value and error information
+       #else:
+        #   answer_txt = input(self.question)
+            
             # Let's try to convert input to numeric
-            try:
-                answer = int(answer_txt)
-                result = (answer, 'OK', 0, 'Conversion successful')
+         #  try:
+             #  answer = int(answer_txt)
+            #   result = (answer, 'OK', 0, 'Conversion successful')
 
             # If an error occurs tell the user to check
-            except Exception as e:
-                print('Virhe syötetyssä arvossa, älä käytä yksiköitä', e)
-                result = (0, 'Error', 1, str(e))
-
+          #  except Exception as e:
+           #    print('Virhe syötetyssä arvossa, älä käytä yksiköitä', e)
+            #   result = (0, 'Error', 1, str(e))
+        
         return result
+    
+def ask_user_boolean(self, true_value, false_value, loop):
+    """Ask a question and coverts the answer to a boolean value
 
-    def ask_user_boolean(self, true_value, false_value, loop):
-        """Ask a question and coverts the answer to a boolean value
-        
-        Args:
-            true_value (str): value to use as True
-            false_value (str): value to use as False
-            loop (bool): If True asks the question until able to convert it
-        
-        Returns:
-            tuple: answer as boolean, error message, error code, detailed error
-        """
+    Args:
+        true_value (str): value to use as True
+        false_value (str): value to use as False 
+        loop (bool): If True asks the question until able to convert it
 
-        # If loop argument is true use while loop until user inputs correct value
-        prompt = f'{self.question}, vastaa {true_value}/{false_value}: '
-        if loop == True:
+    Returns:
+        tuple: answer as boolean, error message, error code, detailed error 
+    """
 
-            while True:
-                answer_txt = input(prompt)
-                answer_txt = answer_txt.lower()
+    # If loop argument is true use while loop until user inputs correct value
+    prompt = f'{self.question}, vastaa {true_value}/{false_value}: '
+    if loop == True:
 
-                if answer_txt == true_value.lower():
-                    answer = True
-                    result = (answer, 'OK', 0, 'Conversion successful')
-                    break
-                elif answer_txt == false_value.lower():
-                    answer = False
-                    result = (answer, 'OK', 0, 'Conversion successful')
-                    break
+        while True
+            answer_txt = input(prompt)
+            answer_txt = answer_txt.lower():
 
-        
-        
-        
-        
-        # Else ask once and return zero value and error information
-        else:
-            answer_txt = input(self.prompt)
-            answer_txt = answer_txt.lower()
-
-        if answer_txt == true_value.lower():
+            if answer_txt == true_value.lower():
                 answer = True
                 result = (answer, 'OK', 0, 'Conversion successful')
-        elif answer_txt == false_value.lower():
-                answer = False
-                result = (answer, 'OK', 0, 'Conversion successful')
-        else:
-            print('Virhe syötetyssä arvossa, sallitut asvot', true_value, false_value)
-            result = ('N/A', 'Error', 1, 'unable to convert to boolean')
-
-        return result
-if __name__ == "__main__":
-
-    question = Question('Kuinka paljon painat (kg) ')
-    answer_and_error = question.ask_user_float(False)
-    print(answer_and_error)
-
-    question2 = Question('Kuinka vanha olet ')
-    answer_and_error = question2.ask_user_integer(False)
-    print(answer_and_error)
-
-    question3 = Question('Haluatko lähteä viikonlopun viettoon? ')
-    answer_and_error = question3.ask_user_boolean('Y', 'N', False)
-    print(answer_and_error)
