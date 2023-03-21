@@ -17,7 +17,6 @@ import questions
    # question = questions.Question('Anna kokonaisluku')
     #assert question.ask_user_integer(False) == (0, 'Error', 1, "invalid literal for int() with base 10: '100 v'")
 
-
 # Test static conversion method to integer
 
 def test_static_ask_user_integer(monkeypatch):
