@@ -13,6 +13,7 @@ class Question():
     def __init__(self, question):
         self.question = question
 
+# A static method to ask a question and covert answer to an integer without creating an object
     @staticmethod
     def ask_user_integer(question, loop):
         """Asks a question and converts the answer to an integer
@@ -142,7 +143,7 @@ class Question():
            #    print('Virhe syötetyssä arvossa, älä käytä yksiköitä', e)
             #   result = (0, 'Error', 1, str(e))
         
-        return result
+       #return result
     
 def ask_user_boolean(self, true_value, false_value, loop):
     """Ask a question and coverts the answer to a boolean value
@@ -162,8 +163,44 @@ def ask_user_boolean(self, true_value, false_value, loop):
 
         while True
             answer_txt = input(prompt)
-            answer_txt = answer_txt.lower():
+            answer_txt = answer_txt.lower()
 
             if answer_txt == true_value.lower():
                 answer = True
                 result = (answer, 'OK', 0, 'Conversion successful')
+                break
+            elif answer_txt == false_value.lower():
+                answer = False
+                result = (answer, 'OK', 0, 'Conversion successful')
+                break
+            else:
+                print('Virhe syötetyssä arvossa, sallitut arvot',
+                      true_value, false_value)
+                result = ('N/A', 'Error', 1,
+                          'unable to convert to boolean')
+                
+    # Else ask once and return zero value and error information
+    else:
+        answer_txt = input(prompt)
+        answer_txt = answer_txt.lower()
+
+        if answer_txt == true_value.lower():
+            answer = True
+            result = (answer, 'OK', 0, 'Conversion successful')
+        elif answer_txt == false_value.lower():
+            answer = False
+            result = (answer, 'OK', 0, 'Conversion successful')
+        else:
+             print('Virhe syötetyssä arvossa, sallitut arvot',
+                   true_value, false_value)
+             result = ('N/A', 'Error', 1, 'unable to convert to boolean')
+
+    return result
+
+
+if __name__ == "__main__":
+
+    answer_and_error = Question.ask_user_integer(
+        'Mikä on elämän tarkoitus? ', False)
+    print(answer_and_error)
+        
