@@ -13,7 +13,7 @@ class Question():
     def __init__(self, question):
         self.question = question
 
-# A static method to ask a question and covert answer to an integer without creating an object
+# A static method to ask a question and convert the answer to an integer without creating an object
     @staticmethod
     def ask_user_integer(question, loop):
         """Asks a question and converts the answer to an integer
