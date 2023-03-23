@@ -16,8 +16,9 @@ name = input('Nimi: ')
 
 weight = questions.Question.ask_user_float('Kuinka paljon painat (kg): ', True)[0]
 height = questions.Question.ask_user_float('Kuinka pitkä olet (cm): ', True)[0]
-age = questions.Question.ask_user_float('Kuinka vanha olet', True)[0]
-gender = questions.Question.ask_user_float('Sukupuoli 1 mies, 0 nainen: ', True)[0]
+age = questions.Question.ask_user_integer('Kuinka vanha olet', True)[0]
+question = questions.Question('Sukupuoli 1 mies, 0 nainen: ')
+gender = questions.Question.ask_user_integer('Sukupuoli 1 mies, 0 nainen: ', True)[0]
 neck = questions.Question.ask_user_float('Mikä on kaulanympäryksesi (cm): ', True)[0]
 waist = questions.Question.ask_user_float('Mikä on vyötärönympäryksesi: ', True)[0]
 

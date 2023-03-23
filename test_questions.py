@@ -8,7 +8,7 @@ def test_static_ask_user_integer(monkeypatch):
     user_input = '100'
     monkeypatch.setattr('builtins.input', lambda _: user_input)
     assert questions.Question.ask_user_integer(
-        'Anna kokonaisluku', False) == (100, 'OK', 0, Conversion successful)
+        'Anna kokonaisluku', False) == (100, 'OK', 0, 'Conversion successful')
 
 # Test if conversion to float works as expected
 def test_ask_user_float(monkeypatch): 
