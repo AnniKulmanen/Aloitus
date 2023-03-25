@@ -180,9 +180,10 @@ class Question():
                     value = dictionary[answer_txt]
                     result = (value, 'OK', 0, 'Conversion successful')
                     break
-                except Exception as e:
+                except Exception as e:  #jos tapahtuu virhe, virhe koodi tallentuu e
                     result = ('N/A', 'Error', 1, str(e))
 
+# Jos loopitus ei ole päällä
         else:
             answer_txt = input(question)
             try:
