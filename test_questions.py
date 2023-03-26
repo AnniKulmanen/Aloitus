@@ -66,4 +66,4 @@ def test_ask_user_dictionary2(monkeypatch):
     user_input = 'jätkä'
     gender_dictionary = {'tyttö': 0, 'poika': 1}
     monkeypatch.setattr('builtins.input', lambda _: user_input)
-    assert questions.Question.ask_user_dictionary('Sukupuoli: ', gender_dictionary, False) == ('N/A', 'Error', 1, "'jätkä")
+    assert questions.Question.ask_user_dictionary('Sukupuoli: ', gender_dictionary, False) == ('N/A', 'Error', 1, "'jätkä'")
