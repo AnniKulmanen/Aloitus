@@ -1,7 +1,6 @@
 # Esimerkkejä päivämäärien, tiedostojen ja JSON-tiedostojen käytöstä
 
 import datetime # Sisäänrakennettu kirjasto aikamääreille
-import json  # Sisäänrakennettu kirjasto JSON-objektien käsittelyä varten
 
 # Päiväyksen muodostaminen
 
