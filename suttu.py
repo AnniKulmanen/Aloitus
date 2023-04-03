@@ -1,6 +1,7 @@
 # Esimerkkejä päivämäärien, tiedostojen ja JSON-tiedostojen käytöstä
 
 import datetime # Sisäänrakennettu kirjasto aikamääreille
+import json  # Sisäänrakennettu kirjasto JSON-objektien käsittelyä varten
 
 # Päiväyksen muodostaminen
 
@@ -61,3 +62,11 @@ def timediff(t1, t2):
 
 kesto = timediff('10:00:00', '14:30:00')
 print(kesto)
+
+# Määritellään Python-sanakirja
+jumppari = {'nimi': 'Erkki', 'Pituus': 171, 'Paino': 75.5}
+
+# Luodaan JSON-merkkijono (objekti)
+json_jumppari = json.dumps(jumppari)
+
+print(json_jumppari)
