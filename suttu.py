@@ -16,7 +16,6 @@ print(date)
 just_now = datetime.datetime.now()
 print(just_now)
 
-hg
 
 
 # Aika ero kahden päivämäärän välillä
