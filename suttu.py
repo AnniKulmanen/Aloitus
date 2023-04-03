@@ -70,3 +70,11 @@ jumppari = {'nimi': 'Erkki', 'Pituus': 171, 'Paino': 75.5}
 json_jumppari = json.dumps(jumppari)
 
 print(json_jumppari)
+
+# Luodaan tiedosto
+file_to_use = open('kuntoilijat.json', 'x')   # kuntoilijat on keksitty voisi olla mikä vain.(x) = on se tila eli luodaan tiedosto
+file_to_use.close() # Suljetaan tiedosto operaation jälkeen AINA
+
+# Kirjoitetaan tiedostoon JSON-objekti
+# Luetaan JSON-objekti tiedostosta
+# Lisätään toinen JSON-objeksi tiedoston loppuun
