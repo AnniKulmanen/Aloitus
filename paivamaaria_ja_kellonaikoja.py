@@ -24,7 +24,7 @@ print(just_now)
 def datediff(d1, d2):  # muuttuja on datediff voi olla minkä niminen vain, sekä d1 ja d2 voi olla mitä vain
     """Calculates the  difference between two dates in days  (tämä on ohje mitä docstring tekee)
 
-    Args:       # Tämä docstring
+    Args:       # Tämä on docstring
         d1 (str): A date in ISO format YYYY-MM-DD
         d2 (str): A date in ISO format YYYY-MM-DD
 
