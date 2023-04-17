@@ -1,16 +1,15 @@
 # PÄÄLUOKKA 
 
-# KUNTOILIJAN TIEDOT OLIO-OHJELMOINTINA
+# KUNTOILIJAN TIEDOT OLIO-OHJELMOINTINA # Täällä hyödynnetty fitness moduuleja
 # =====================================
 
-# KIRJASTOT AJ MODUULIT (LIBRARIES AND MODULES)
+# KIRJASTOT JA MODUULIT (LIBRARIES AND MODULES)
 # ---------------------------------------------
 
 import fitness
 
 # LUOKKAMÄÄRITYKSET (CLASS DEFINITIONS)
 # -------------------------------------
-
 
 # Kuntoilija-luokka Yliluokka (super class) JuniorKuntoilijalle 
 
@@ -19,7 +18,7 @@ class Kuntoilija:
     """Luokka kuntoilijan tietoja varten"""
 
     # Oliomuodostin eli konstruktori, self -> tuleva olio (jonka nimeä ei vielä tiedetä) mutta sen parametrit laitetaan tähän
-    def __init__(self, nimi, pituus, paino, ika, sukupuoli):
+    def __init__(self, nimi, pituus, paino, ika, sukupuoli, paiva):
         
         # Määritellään tulevan olion ominaisuudet (property), luokan kentät (field)
         self.nimi = nimi
@@ -28,6 +27,7 @@ class Kuntoilija:
         self.ika = ika
         self.sukupuoli = sukupuoli
         self.bmi = fitness.laske_bmi(self.paino, self.pituus)
+        self.punnitus_paiva = paiva
 
     # Metodi rasvaprosentin laskemiseen (yleinen/aikuinen)
     def rasvaprosentti(self): # Tähän voisi laittaa parametreja jos haluaa
@@ -61,7 +61,7 @@ class Kuntoilija:
             pituus, vyotaron_ymparys, lantion_ymparys, kaulan_ymparys)
         return usa_rasvaprosentti
     
-# JuniorKuntoilija-luokka Kuntoilija-luokan ailuokka (subclass)
+# JuniorKuntoilija-luokka Kuntoilija-luokan ailuokka (subclass) PERIYTYMISIÄ
 
 class JunioriKuntoilija(Kuntoilija):
     """Luokka nuoren kuntoilijan tiedoille """
