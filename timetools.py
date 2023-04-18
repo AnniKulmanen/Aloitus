@@ -4,11 +4,11 @@
 # LIBARARIES AND MODULES
 import datetime # Python's internal date-time library
 
-def datediff(d1, d2):  # muuttuja on datediff voi olla minkä niminen vain, sekä d1 ja d2 voi olla mitä vain
+def datediff(d1, d2):  # muuttuja on datediff voi olla minkä niminen vain, sekä on parametrejä d1 ja d2 voi olla mitä vain
     """Calculates the  difference between two dates in days  (tämä on ohje mitä docstring tekee)
 
     Args:       # Tämä on docstring
-        d1 (str): A date in ISO format YYYY-MM-DD
+        d1 (str): A date in ISO format YYYY-MM-DD   # str = voi olla vain teksti. 10-12 on tekstiä viivan takia.
         d2 (str): A date in ISO format YYYY-MM-DD
 
     Returns: 
@@ -27,7 +27,7 @@ def timediff(t1, t2):
         t2 (str): time value in format HH:MM:SS
 
     Returns:
-        float: time difference in hours  (Tämä on mitä docstring palauttaa)
+        float: time difference in hours  (Tämä on mitä docstring palauttaa) # float on liukuluku arvo
     """
     t1 = datetime.datetime.strptime(t1, "%H:%M:%S")
     t2 = datetime.datetime.strptime(t2, "%H:%M:%S")
@@ -75,7 +75,7 @@ def timediff2(t1, t2, unit):
     value = seconds / divider
     return value
 
-if __name__ == '__main__': # Tämän alla voi turvallisesti testata. Nämä testit voi poistaa
+if __name__ == '__main__': # Kehityksen aikaisia kokeiluja / toimivuuden varmistamisia. (Että funktiot toimii) Nämä testit voi poistaa
 
     # Let's test date difference
     date1 = '2023-03-21'
@@ -91,4 +91,5 @@ if __name__ == '__main__': # Tämän alla voi turvallisesti testata. Nämä test
     print('ero oli', ero, 'minuuttia')
    
 
-
+   # Esimerkki  docstring käytöstä kun laitat vain datediff() menet () kohdalle se kertoo mitä tehdä
+   # datediff('1987-01-01','2023-04-14') 
