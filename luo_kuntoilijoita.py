@@ -19,7 +19,8 @@ date_of_weighing = input('Punnituspäivä (vvvv-kk-pp): ')
 weight = questions.Question.ask_user_float('Kuinka paljon painat (kg): ', True)[0]
 height = questions.Question.ask_user_float('Kuinka pitkä olet (cm): ', True)[0]
 age = questions.Question.ask_user_integer('Kuinka vanha olet: ', True)[0]
-gender = questions.Question.ask_user_integer('Sukupuoli 1 mies, 0 nainen: ', True)[0]
+allowed_genders = {'1': 1, '0': 0}  # Palauttaa kokonaisluvun 1 tai 0
+gender = questions.Question.ask_user_dictionary('Sukupuoli 1 mies, 0 nainen: ', allowed_genders, True)[0]   # True takia kysyy kysymystä niin kauan että vastaa 1 tai 0
 neck = questions.Question.ask_user_float('Mikä on kaulanympäryksesi (cm): ', True)[0]
 waist = questions.Question.ask_user_float('Mikä on vyötärönympäryksesi: ', True)[0]
 
