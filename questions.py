@@ -162,7 +162,7 @@ class Question():
 
     # Method to ask a question and convert answer according to a dictionary
     @staticmethod
-    def ask_user_dictionary(question, dictionary, loop):
+    def ask_user_dictionary(question, dictionary, loop):    # Sanakirjan sallitut avaimet ovat ainoat mitkä saa syöttää. Jos syötät avaimen jota ie löydy tulee virhe.
         """Returns a value based on dictionary
 
         Args:
@@ -175,7 +175,7 @@ class Question():
         """
         if loop == True:
             while True:
-                answer_txt = input(question).lower
+                answer_txt = input(question).lower()
                 try:
                     value = dictionary[answer_txt]
                     result = (value, 'OK', 0, 'Conversion successful')

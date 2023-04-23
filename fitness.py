@@ -76,7 +76,7 @@ def usarasvaprosentti_mies(pituus, vyotaron_ymparys, kaulan_ymparys):
     
     return usarprosentti
 
-def usarasvaprosentti_nainen(pituus, vyotaron_ymparys, kaulan_ymparys, lantion_ymparys):
+def usarasvaprosentti_nainen(pituus, vyotaron_ymparys, lantion_ymparys, kaulan_ymparys):
     """Laskee naisen kehon rasvaprosentin USA: armeijan kaavalla
 
     Args:
