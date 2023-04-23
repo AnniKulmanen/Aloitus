@@ -19,7 +19,7 @@ date_of_weighing = input('Punnituspäivä (vvvv-kk-pp): ')
 weight = questions.Question.ask_user_float('Kuinka paljon painat (kg): ', True)[0]
 height = questions.Question.ask_user_float('Kuinka pitkä olet (cm): ', True)[0]
 age = questions.Question.ask_user_integer('Kuinka vanha olet: ', True)[0]
-allowed_genders = {'1': 1, '0': 0}  # Palauttaa kokonaisluvun 1 tai 0
+allowed_genders = {'1': 1, '0': 0}  # Palauttaa kokonaisluvun 1 tai 0. Muuttaa tekstin numeroksi.
 gender = questions.Question.ask_user_dictionary('Sukupuoli 1 mies, 0 nainen: ', allowed_genders, True)[0]   # True takia kysyy kysymystä niin kauan että vastaa 1 tai 0
 neck = questions.Question.ask_user_float('Mikä on kaulanympäryksesi (cm): ', True)[0]
 waist = questions.Question.ask_user_float('Mikä on vyötärönympäryksesi: ', True)[0]
@@ -40,8 +40,7 @@ fat_percentage = athlete.rasvaprosentti()
 if gender == 1:
     usa_fat_percentage = athlete.usa_rasvaprosentti_mies(height, waist, neck)
 else:
-    usa_fat_percentage = athlete.usa_rasvaprosentti_nainen(
-        height, waist, hips, neck)
+    usa_fat_percentage = athlete.usa_rasvaprosentti_nainen(height, waist, hips, neck)
 
 text_to_show = f'suomalainen rasva-% on {fat_percentage} ja amerikkalainen on {usa_fat_percentage}'
 print(text_to_show)
@@ -66,7 +65,10 @@ athlete_data.append(athlete_data_row)
 # SAVE DATA TO A FILE
 
 with open('athlete_data.json', 'w') as file: # luo athlete_data.json objektin. w koska halutaan kirjoittaa json.
-    json.dump(athlete_data, file) # Haetaan json kirjastosta dump. dump haluaa objektin ja fp eli tiedoston
+    json.dump(athlete_data, file, indent=4) # Haetaan json kirjastosta dump. dump haluaa objektin ja fp eli tiedoston. 
+                                            # Jos haluaa AINA vikaksi voi laittaa indent=4 eli 4 välin sisennys (sisentää tekstin helpommin luettavaksi)
+                                            # Sen jälkeen tallenna ja aja terminaali
+
 
 # TODO: Read it from a JSON file
 
