@@ -70,5 +70,3 @@ with open('athlete_data.json', 'w') as file: # luo athlete_data.json objektin. w
                                             # Sen jälkeen tallenna ja aja terminaali
 
 
-# TODO: Read it from a JSON file
-
