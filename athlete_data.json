@@ -46,5 +46,21 @@
         "ika": 35,
         "sukupuoli": 0,
         "pvm": "2023-01-01"
+    },
+    {
+        "nimi": "jk",
+        "pituus": 171.0,
+        "paino": 70.0,
+        "ika": 34,
+        "sukupuoli": 1,
+        "pvm": "2023-01-01"
+    },
+    {
+        "nimi": "jkj",
+        "pituus": 182.0,
+        "paino": 70.0,
+        "ika": 34,
+        "sukupuoli": 0,
+        "pvm": "2023-01-01"
     }
 ]
