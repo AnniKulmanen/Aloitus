@@ -123,8 +123,10 @@ if __name__ == "__main__": # Kaikki tämän yläpuolella on käytettävissä muu
     ika = float(ika_teksti)
     sukupuoli = float(sukupuoli_teksti)
     vyotaron_ymparys = float(vyotaron_ymparys_teksti)
-    kaulan_ymparys = float(kaulan_ymparys_teksti)
     lantion_ymparys = float(lantion_ymparys_teksti)
+    kaulan_ymparys = float(kaulan_ymparys_teksti)
+
+    
 
     # Lasketaan painoindeksi funktiolla laske_bmi
     oma_bmi = laske_bmi(paino, pituus)

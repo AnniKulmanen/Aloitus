@@ -64,7 +64,7 @@ def usarasvaprosentti_mies(pituus, vyotaron_ymparys, kaulan_ymparys):
     Args:
         pituus (float): pituus (cm)
         vuotaron_ymparys (float): vatsan ympärysmitta (cm)
-        kaulan_ymparys (flaot): kaulan ympärusmitta (cm)
+        kaulan_ymparys (flaot): kaulan ympärysmitta (cm)
     
     Returns:
         float: rasvaprosentti
