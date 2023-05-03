@@ -60,7 +60,7 @@ athlete_data_row = {'nimi': athlete.nimi, 'pituus': athlete.pituus, 'paino': ath
                     'ika': athlete.ika, 'sukupuoli': athlete.sukupuoli, 'pvm': athlete.punnitus_paiva}
 
 # Add a new data row to the athlete_data list
-athlete_data.append(athlete_data_row)
+athlete_data.append(athlete_data_row) # Tässä on yhden kuntoilijan tiedot: nimi, pituus, paino, ikä, sukupuoli, punnituspäivä
 
 # SAVE DATA TO A FILE
 
