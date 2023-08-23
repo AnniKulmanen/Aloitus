@@ -38,5 +38,13 @@
         "ika": 60,
         "sukupuoli": 1,
         "pvm": "2023-04-01"
+    },
+    {
+        "nimi": "makaa",
+        "pituus": 190.0,
+        "paino": 80.0,
+        "ika": 33,
+        "sukupuoli": 1,
+        "pvm": "2023-03-03"
     }
 ]
