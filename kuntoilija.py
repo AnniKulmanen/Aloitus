@@ -90,5 +90,5 @@ class JunioriKuntoilija(Kuntoilija):
     juniorkuntoilija = JunioriKuntoilija('Aku', 171, 65, 16, 1)
     print(juniorkuntoilija.nimi, 'painaa', juniorkuntoilija.paino, 'kg')
     #print('painoindeksi on', kuntoilija.bmi)
-   hjkghkgh print('rasvaprosentti on ', juniorkuntoilija.rasvaprosentti ())
+    #print('rasvaprosentti on ', juniorkuntoilija.rasvaprosentti ())
    """ 
